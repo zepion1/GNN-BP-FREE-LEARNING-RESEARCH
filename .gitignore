@@ -1,0 +1,26 @@
+# Python / Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Environments, caches and downloaded data: never committed (the code re-downloads and checksum-verifies data)
+.uv-cache/
+.pip-cache/
+/env/
+/python/
+/bin/
+/data/
+/raw/
+/datasplits/
+
+# Cluster working files
+/logs/
+/smoke_records/
+*.out
+
+# Rebuilt from the other folders (see Results/README.md)
+Results/bench_records/reddit2-merged/
+
+# Archives used only to transfer files
+*.tar.gz
+*.zip
