@@ -1,0 +1,16 @@
+256 logs read, 88 used; 3020 layer records from 440 complete runs -> reports/layers/
+cross-check: last-layer accuracy matches the recorded accuracy in every run
+
+Depth 16: later layers reset (of 15), accuracy after layer 1 and after layer 16, mean over runs
+  PubMed   GCN   SF       n=5  reset  8.8   86.95% ->  86.32%  gain -0.63 ± 0.40
+  PubMed   GCN   SF-noVN  n=5  reset 11.8   88.59% ->  88.43%  gain -0.16 ± 0.44
+  PubMed   GCN   SF-uni   n=5  reset 10.4   88.12% ->  86.52%  gain -1.60 ± 0.65
+  PubMed   SAGE  SF       n=5  reset  6.8   78.29% ->  84.36%  gain +6.07 ± 0.81
+  PubMed   SAGE  SF-noVN  n=5  reset 12.4   89.15% ->  88.68%  gain -0.47 ± 0.57
+  PubMed   SAGE  SF-uni   n=5  reset 10.4   88.39% ->  88.35%  gain -0.04 ± 0.64
+  Reddit2  GCN   SF       n=5  reset  8.6   91.03% ->  92.95%  gain +1.93 ± 0.24
+  Reddit2  GCN   SF-noVN  n=5  reset 15.0   90.28% ->  90.18%  gain -0.10 ± 0.02
+  Reddit2  GCN   SF-uni   n=5  reset  9.0   91.19% ->  93.13%  gain +1.94 ± 0.15
+  Reddit2  SAGE  SF       n=5  reset  8.8   91.69% ->  93.71%  gain +2.02 ± 0.06
+  Reddit2  SAGE  SF-noVN  n=5  reset 15.0   93.02% ->  92.94%  gain -0.08 ± 0.03
+  Reddit2  SAGE  SF-uni   n=5  reset  8.2   92.10% ->  93.93%  gain +1.83 ± 0.15

@@ -1,0 +1,60 @@
+model                               L  probe    peak GB worst h/run  group   note
+GNN-GCN                             6  ok           7.5         0.3  day     
+GNN-GCN                             8  ok           9.2         0.4  day     
+GNN_SingleForward-GCN               6  ok           5.0         0.9  day     
+GNN_SingleForward-GCN               8  ok           5.0         1.4  day     
+GNN_Top2Loss_SingleForward-GCN      6  ok           7.2         0.5  day     
+GNN_Top2Loss_SingleForward-GCN      8  ok           7.7         0.6  day     
+GNN-SAGE                            6  ok           4.6         0.2  day     
+GNN-SAGE                            8  ok           5.4         0.2  day     
+GNN_SingleForward-SAGE              6  ok           3.9         0.3  day     
+GNN_SingleForward-SAGE              8  ok           3.9         0.4  day     
+GNN_Top2Loss_SingleForward-SAGE     6  ok           5.9         0.2  day     
+GNN_Top2Loss_SingleForward-SAGE     8  ok           6.6         0.3  day     
+GNN-GAT                             6  oom         27.3           -  oom     
+GNN-GAT                             8  oom         27.3           -  oom     
+GNN-GAT                            12  oom         27.3           -  oom     
+GNN-GAT                            16  oom         27.3           -  oom     
+GNN_SingleForward-GAT               6  oom         27.5           -  oom     
+GNN_SingleForward-GAT               8  oom         27.5           -  oom     
+GNN_SingleForward-GAT              12  oom         27.5           -  oom     
+GNN_SingleForward-GAT              16  oom         27.5           -  oom     
+GNN_Top2Input_SingleForward-GAT     6  oom         28.3           -  oom     
+GNN_Top2Input_SingleForward-GAT     8  oom         28.5           -  oom     
+GNN_Top2Input_SingleForward-GAT    12  oom         29.0           -  oom     
+GNN_Top2Input_SingleForward-GAT    16  oom         29.4           -  oom     
+GNN_Top2Loss_SingleForward-GAT      6  oom         28.3           -  oom     
+GNN_Top2Loss_SingleForward-GAT      8  oom         28.5           -  oom     
+GNN_Top2Loss_SingleForward-GAT     12  oom         29.0           -  oom     
+GNN_Top2Loss_SingleForward-GAT     16  oom         29.4           -  oom     
+GNN-GCN                            12  ok          12.6         0.6  day     
+GNN-GCN                            16  ok          15.9         0.7  day     
+GNN_SingleForward-GCN              12  ok           5.1         2.6  day     
+GNN_SingleForward-GCN              16  ok           5.1         4.3  day     
+GNN_Top2Input_SingleForward-GCN     6  ok           7.1         1.6  day     
+GNN_Top2Input_SingleForward-GCN     8  ok           7.9         2.4  day     
+GNN_Top2Input_SingleForward-GCN    12  ok           9.7         3.6  day     
+GNN_Top2Input_SingleForward-GCN    16  ok          11.4         4.7  week    
+GNN_Top2Loss_SingleForward-GCN     12  ok           8.6         0.9  day     
+GNN_Top2Loss_SingleForward-GCN     16  ok           9.6         1.2  day     
+GNN-SAGE                           12  ok           7.0         0.3  day     
+GNN-SAGE                           16  ok           8.6         0.3  day     
+GNN_SingleForward-SAGE             12  ok           3.9         0.6  day     
+GNN_SingleForward-SAGE             16  ok           3.9         0.9  day     
+GNN_Top2Input_SingleForward-SAGE    6  ok           5.6         0.7  day     
+GNN_Top2Input_SingleForward-SAGE    8  ok           6.3         0.9  day     
+GNN_Top2Input_SingleForward-SAGE   12  ok           8.0         1.0  day     
+GNN_Top2Input_SingleForward-SAGE   16  ok           9.7         1.3  day     
+GNN_Top2Loss_SingleForward-SAGE    12  ok           8.0         0.3  day     
+GNN_Top2Loss_SingleForward-SAGE    16  ok           9.4         0.4  day     
+
+Submission commands (run from $FGNN_ROOT):
+
+# oom: 16 config(s)
+FGNN_JOBS=$PWD/jobs_reddit_oom.tsv sbatch --partition=gpu-short --array=1-16%4 --time=02:00:00 --mem=64G run_array.sbatch
+
+# day: 31 config(s)
+FGNN_JOBS=$PWD/jobs_reddit_day.tsv sbatch --partition=gpu-day-long --array=1-31%4 --time=1-00:00:00 --mem=96G run_array.sbatch
+
+# week: 1 config(s)
+FGNN_JOBS=$PWD/jobs_reddit_week.tsv sbatch --partition=gpu-week-long --array=1-1%4 --time=7-00:00:00 --mem=96G run_array.sbatch

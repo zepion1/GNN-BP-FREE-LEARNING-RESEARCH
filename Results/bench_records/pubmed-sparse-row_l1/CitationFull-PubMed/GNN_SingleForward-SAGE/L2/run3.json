@@ -1,0 +1,100 @@
+{
+  "status": "ok",
+  "dataset": "CitationFull-PubMed",
+  "model": "GNN_SingleForward-SAGE",
+  "arch": "SAGE",
+  "method": "SF",
+  "num_layers": 2,
+  "run_i": 3,
+  "split_i": 3,
+  "seed": 10109,
+  "exp_setting": "pubmed-sparse-row_l1",
+  "mp_backend": "sparse",
+  "feature_norm": "row_l1",
+  "hparams": {
+    "lr": 0.001,
+    "epochs": 1000,
+    "patience": 100,
+    "val_every": 2,
+    "num_hidden": 128,
+    "num_runs": 5,
+    "seed": 100,
+    "temperature": 1.0,
+    "append_label": null,
+    "aug_edge_direction": "bidirection",
+    "alternating_update": false,
+    "test_time_steps": 10,
+    "storable_time_steps": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "grad_max_norm": 1.0,
+    "val_from": 0
+  },
+  "device": "cuda:0",
+  "python": "3.10.22",
+  "torch": "1.13.1+cu117",
+  "torch_geometric": "2.2.0",
+  "finished_at": "2026-10-28T00:19:34+00:00",
+  "acc": 80.39563783920872,
+  "f1_macro": 79.92604605673894,
+  "f1_micro": 80.39563783920872,
+  "f1_weighted": 80.32148974276343,
+  "perf_reported_by_script": 80.39563783920872,
+  "n_test": 3943,
+  "per_class": {
+    "f1": [
+      77.51842751842753,
+      83.4815756035578,
+      78.7781350482315
+    ],
+    "precision": [
+      79.77243994943109,
+      80.61349693251533,
+      80.4862023653088
+    ],
+    "recall": [
+      75.38829151732378,
+      86.56126482213439,
+      77.14105793450882
+    ],
+    "test_support": [
+      837,
+      1518,
+      1588
+    ],
+    "predicted": [
+      791,
+      1630,
+      1522
+    ]
+  },
+  "train_time_s": 6.708040691912174,
+  "test_eval_during_training_s": 0.30761558935046196,
+  "n_test_evals_during_training": 110,
+  "layer_result_files_s": 0.0023929663002490997,
+  "train_time_excl_test_s": 6.398032136261463,
+  "run_wall_time_s": 6.81546201556921,
+  "train_epochs": [
+    981,
+    237
+  ],
+  "best_val_epochs": [
+    781,
+    37
+  ],
+  "epochs_total": 1220,
+  "gpu_peak_alloc_train_mb": 208.7626953125,
+  "gpu_peak_reserved_train_mb": 222.0,
+  "gpu_peak_alloc_mb": 208.7626953125,
+  "gpu_peak_reserved_mb": 222.0,
+  "gpu_alloc_at_run_start_mb": 84.8017578125,
+  "gpu_name": "NVIDIA A100-PCIE-40GB",
+  "gpu_total_mb": 40326.375
+}

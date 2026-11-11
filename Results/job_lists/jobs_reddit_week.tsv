@@ -1,0 +1,2 @@
+idx	tier	dataset	arch	method	depth	est_class	command
+36	1	Reddit2	GCN	SF-Top2Input	16	xlarge	-m fgnn_bench.run_bench --records-dir RECORDS_ROOT/webkb-reddit-sparse-standardize --mp-backend sparse --feature-norm standardize -- train_forward.py --exp-setting webkb-reddit-sparse-standardize --dataset Reddit2 --task node-class --model GNN_Top2Input_SingleForward-GCN --num-layers 16 --num-runs 5 --seed 100 --epochs 1000 --val-every 2 --lr 0.001 --patience 100 --num-hidden 128 --append-label none --aug-edge-direction bidirection --alternating-update

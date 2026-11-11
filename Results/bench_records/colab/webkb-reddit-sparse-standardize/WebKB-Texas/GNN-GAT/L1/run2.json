@@ -1,0 +1,91 @@
+{
+  "status": "ok",
+  "dataset": "WebKB-Texas",
+  "model": "GNN-GAT",
+  "arch": "GAT",
+  "method": "BP",
+  "num_layers": 1,
+  "run_i": 2,
+  "split_i": 2,
+  "seed": 10106,
+  "exp_setting": "webkb-reddit-sparse-standardize",
+  "mp_backend": "sparse",
+  "feature_norm": "standardize",
+  "hparams": {
+    "lr": 0.001,
+    "epochs": 1000,
+    "patience": 100,
+    "val_every": 2,
+    "num_hidden": 128,
+    "num_runs": 5,
+    "seed": 100
+  },
+  "device": "cuda:0",
+  "python": "3.10.21",
+  "torch": "1.13.1+cu117",
+  "torch_geometric": "2.2.0",
+  "finished_at": "2026-10-12T19:10:08+00:00",
+  "acc": 70.27027027027027,
+  "f1_macro": 53.57779475426535,
+  "f1_micro": 70.27027027027027,
+  "f1_weighted": 69.65636377401083,
+  "perf_reported_by_script": 0.7027027027027027,
+  "n_test": 37,
+  "per_class": {
+    "f1": [
+      33.333333333333336,
+      70.58823529411765,
+      28.571428571428577,
+      0.0,
+      81.81818181818183
+    ],
+    "precision": [
+      100.0,
+      75.0,
+      20.0,
+      0.0,
+      78.26086956521739
+    ],
+    "recall": [
+      20.0,
+      66.66666666666666,
+      50.0,
+      0.0,
+      85.71428571428571
+    ],
+    "test_support": [
+      5,
+      9,
+      2,
+      0,
+      21
+    ],
+    "predicted": [
+      1,
+      8,
+      5,
+      0,
+      23
+    ]
+  },
+  "train_time_s": 1.11490749099994,
+  "test_eval_during_training_s": 0.0,
+  "n_test_evals_during_training": 0,
+  "layer_result_files_s": 0.0,
+  "train_time_excl_test_s": 1.11490749099994,
+  "run_wall_time_s": 1.1380405790000623,
+  "train_epochs": [
+    233
+  ],
+  "best_val_epochs": [
+    -1
+  ],
+  "epochs_total": 234,
+  "gpu_peak_alloc_train_mb": 2.5595703125,
+  "gpu_peak_reserved_train_mb": 22.0,
+  "gpu_peak_alloc_mb": 2.5595703125,
+  "gpu_peak_reserved_mb": 22.0,
+  "gpu_alloc_at_run_start_mb": 1.4990234375,
+  "gpu_name": "NVIDIA A100-SXM4-80GB",
+  "gpu_total_mb": 81152.75
+}

@@ -1,0 +1,81 @@
+{
+  "status": "ok",
+  "dataset": "CitationFull-PubMed",
+  "model": "GNN-GCN",
+  "arch": "GCN",
+  "method": "BP",
+  "num_layers": 6,
+  "run_i": 3,
+  "split_i": 3,
+  "seed": 10109,
+  "exp_setting": "pubmed-sparse-row_l1",
+  "mp_backend": "sparse",
+  "feature_norm": "row_l1",
+  "hparams": {
+    "lr": 0.001,
+    "epochs": 1000,
+    "patience": 100,
+    "val_every": 2,
+    "num_hidden": 128,
+    "num_runs": 5,
+    "seed": 100
+  },
+  "device": "cuda:0",
+  "python": "3.10.22",
+  "torch": "1.13.1+cu117",
+  "torch_geometric": "2.2.0",
+  "finished_at": "2026-10-28T00:13:42+00:00",
+  "acc": 84.37737763124524,
+  "f1_macro": 83.44674075458207,
+  "f1_micro": 84.37737763124524,
+  "f1_weighted": 84.33727366307285,
+  "perf_reported_by_script": 0.8437737763124524,
+  "n_test": 3943,
+  "per_class": {
+    "f1": [
+      78.37998808814771,
+      87.64331210191084,
+      84.31692207368765
+    ],
+    "precision": [
+      78.14726840855107,
+      84.83353884093712,
+      87.4239350912779
+    ],
+    "recall": [
+      78.61409796893668,
+      90.6455862977602,
+      81.42317380352645
+    ],
+    "test_support": [
+      837,
+      1518,
+      1588
+    ],
+    "predicted": [
+      842,
+      1622,
+      1479
+    ]
+  },
+  "train_time_s": 20.692287240177393,
+  "test_eval_during_training_s": 0.0,
+  "n_test_evals_during_training": 0,
+  "layer_result_files_s": 0.0,
+  "train_time_excl_test_s": 20.692287240177393,
+  "run_wall_time_s": 20.867764804512262,
+  "train_epochs": [
+    815
+  ],
+  "best_val_epochs": [
+    -1
+  ],
+  "epochs_total": 816,
+  "gpu_peak_alloc_train_mb": 180.248046875,
+  "gpu_peak_reserved_train_mb": 212.0,
+  "gpu_peak_alloc_mb": 180.248046875,
+  "gpu_peak_reserved_mb": 212.0,
+  "gpu_alloc_at_run_start_mb": 41.91162109375,
+  "gpu_name": "NVIDIA A100-PCIE-40GB",
+  "gpu_total_mb": 40326.375
+}

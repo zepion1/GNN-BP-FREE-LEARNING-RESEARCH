@@ -1,0 +1,108 @@
+{
+  "status": "ok",
+  "dataset": "WebKB-Texas",
+  "model": "GNN_Top2Loss_SingleForward-GAT",
+  "arch": "GAT",
+  "method": "SF-Top2Loss",
+  "num_layers": 4,
+  "run_i": 4,
+  "split_i": 4,
+  "seed": 10112,
+  "exp_setting": "webkb-reddit-sparse-standardize",
+  "mp_backend": "sparse",
+  "feature_norm": "standardize",
+  "hparams": {
+    "lr": 0.001,
+    "epochs": 1000,
+    "patience": 100,
+    "val_every": 2,
+    "num_hidden": 128,
+    "num_runs": 5,
+    "seed": 100,
+    "temperature": 1.0,
+    "append_label": null,
+    "aug_edge_direction": "bidirection",
+    "alternating_update": true,
+    "test_time_steps": 10,
+    "storable_time_steps": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "grad_max_norm": 1.0,
+    "val_from": 0
+  },
+  "device": "cuda:0",
+  "python": "3.10.21",
+  "torch": "1.13.1+cu117",
+  "torch_geometric": "2.2.0",
+  "finished_at": "2026-10-12T19:17:51+00:00",
+  "acc": 48.64864864864865,
+  "f1_macro": 25.306122448979597,
+  "f1_micro": 48.64864864864865,
+  "f1_weighted": 37.79371207942637,
+  "perf_reported_by_script": 48.648648648648646,
+  "n_test": 37,
+  "per_class": {
+    "f1": [
+      40.0,
+      0.0,
+      0.0,
+      0.0,
+      61.224489795918366
+    ],
+    "precision": [
+      100.0,
+      0.0,
+      0.0,
+      0.0,
+      44.11764705882353
+    ],
+    "recall": [
+      25.0,
+      0.0,
+      0.0,
+      0.0,
+      100.0
+    ],
+    "test_support": [
+      12,
+      5,
+      5,
+      0,
+      15
+    ],
+    "predicted": [
+      3,
+      0,
+      0,
+      0,
+      34
+    ]
+  },
+  "train_time_s": 5.646928619999926,
+  "test_eval_during_training_s": 0.0452325149999524,
+  "n_test_evals_during_training": 3,
+  "layer_result_files_s": 0.0,
+  "train_time_excl_test_s": 5.601696104999974,
+  "run_wall_time_s": 5.689552278000065,
+  "train_epochs": [
+    205
+  ],
+  "best_val_epochs": [
+    5
+  ],
+  "epochs_total": 206,
+  "gpu_peak_alloc_train_mb": 14.47412109375,
+  "gpu_peak_reserved_train_mb": 34.0,
+  "gpu_peak_alloc_mb": 14.47412109375,
+  "gpu_peak_reserved_mb": 34.0,
+  "gpu_alloc_at_run_start_mb": 6.64990234375,
+  "gpu_name": "NVIDIA A100-SXM4-80GB",
+  "gpu_total_mb": 81152.75
+}
